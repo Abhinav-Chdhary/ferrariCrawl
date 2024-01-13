@@ -1,5 +1,17 @@
-import React from "react";
+import React, { Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
+import "./App.css";
+
+function CarShow() {
+  return null;
+}
 
 export default function App() {
-  return <div>App</div>;
+  return (
+    <Suspense fallback={null}>
+      <Canvas shadows>
+        <CarShow />
+      </Canvas>
+    </Suspense>
+  );
 }
